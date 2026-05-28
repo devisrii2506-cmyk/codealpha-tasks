@@ -1,0 +1,31 @@
+# Hardcoded stock prices
+stock_prices = {
+    "infosys": 1450,
+    "reliance": 2800,
+    "tcs": 3900,
+    "wipro": 520,
+    "hdfc": 1650
+}
+
+print("Simple Stock Tracker")
+
+# User input
+stock_name = input("Enter stock name: ").lower()
+quantity = int(input("Enter quantity: "))
+
+# Check if stock exists
+if stock_name in stock_prices:
+
+    # Calculate total investment
+    price = stock_prices[stock_name]
+    total = price * quantity
+
+    # Display result
+    print("\n Stock Details")
+    print("Stock Name:", stock_name.title())
+    print("Price per Share: ₹", price)
+    print("Quantity:", quantity)
+    print("Total Investment: ₹", total)
+
+else:
+    print(" Stock not found!")
